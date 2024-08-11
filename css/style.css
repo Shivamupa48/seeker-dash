@@ -145,6 +145,7 @@ div.loader h1 span {
   background-color: var(--main-color);
   display: grid;
   grid-template-columns: 220px 1fr;
+  position: relative;
 }
 .index-page {
   display: none;
@@ -161,12 +162,23 @@ div.loader h1 span {
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 10px 0px #ddd;
-  position: relative;
+  position:fixed;
   transition: transform 0.45s;
   -webkit-transition: transform 0.45s;
   -moz-transition: transform 0.45s;
   -ms-transition: transform 0.45s;
   -o-transition: transform 0.45s;
+}
+.header{
+  width: 80%;
+  position:absolute;
+  left:250px
+}
+
+.main-content{
+  position:absolute;
+  left:250px;
+  top:70px
 }
 @media (max-width: 767px) {
   .sidebar {
@@ -3012,3 +3024,31 @@ input {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
+/* default button */
+.wurkify-custom-button {
+  background: linear-gradient(180deg, #0172B2 0%, #001645 100%);
+  color: #ffffff;
+  padding: 10px 10px;
+  margin-top: 150px;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.wurkify-custom-button:hover {
+  background: linear-gradient(180deg, #001645 0%, #0172B2 100%);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.wurkify-custom-button:active {
+  background: linear-gradient(180deg, #0172B2 0%, #001645 100%);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  transform: translateY(0);
+}
+  
